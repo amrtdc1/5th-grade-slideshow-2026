@@ -1,0 +1,1569 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>5th Grade Memories 2025–2026</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@600;700;800&display=swap"
+    rel="stylesheet"
+  />
+
+  <style>
+    /* =============================================
+       DESIGN TOKENS — update school colors here
+       ============================================= */
+    :root {
+      /* TODO: UPDATE — Replace with your school's colors */
+      --color-primary:       #003087;
+      --color-primary-light: #1a4fad;
+      --color-primary-dark:  #001f5b;
+      --color-secondary:     #FFB81C;
+      --color-secondary-dark:#e0a015;
+      --color-accent:        #e74c3c;
+      --color-bg:            #f0f4f8;
+      --color-surface:       #ffffff;
+      --color-text:          #1a1a2e;
+      --color-text-muted:    #6b7a8d;
+      --color-border:        #dde3ec;
+
+      --font-heading: 'Poppins', sans-serif;
+      --font-body:    'Inter', sans-serif;
+
+      --radius-sm:  8px;
+      --radius-md:  16px;
+      --radius-lg:  24px;
+      --radius-xl:  32px;
+
+      --shadow-sm:  0 2px 8px rgba(0,0,0,0.08);
+      --shadow-md:  0 8px 24px rgba(0,0,0,0.10);
+      --shadow-lg:  0 16px 48px rgba(0,0,0,0.14);
+      --shadow-glow:0 0 32px rgba(255,184,28,0.35);
+    }
+
+    /* =============================================
+       RESET & BASE
+       ============================================= */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    html { scroll-behavior: smooth; font-size: 16px; }
+
+    body {
+      font-family: var(--font-body);
+      background: var(--color-bg);
+      color: var(--color-text);
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+
+    img { max-width: 100%; display: block; }
+    a { color: inherit; text-decoration: none; }
+
+    /* =============================================
+       UTILITY
+       ============================================= */
+    .container {
+      max-width: 1100px;
+      margin-inline: auto;
+      padding-inline: 24px;
+    }
+
+    .sr-only {
+      position: absolute; width: 1px; height: 1px;
+      padding: 0; margin: -1px; overflow: hidden;
+      clip: rect(0,0,0,0); white-space: nowrap; border: 0;
+    }
+
+    /* =============================================
+       ANIMATIONS
+       ============================================= */
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(32px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to   { opacity: 1; }
+    }
+    @keyframes float {
+      0%, 100% { transform: translateY(0); }
+      50%       { transform: translateY(-10px); }
+    }
+    @keyframes shimmer {
+      0%   { background-position: -200% center; }
+      100% { background-position:  200% center; }
+    }
+    @keyframes sparkle {
+      0%, 100% { opacity: 1; transform: scale(1); }
+      50%       { opacity: 0.5; transform: scale(0.8); }
+    }
+    @keyframes gradientShift {
+      0%   { background-position: 0% 50%; }
+      50%  { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+    @keyframes starFloat {
+      0%   { transform: translateY(0) rotate(0deg); opacity: 0.7; }
+      100% { transform: translateY(-100vh) rotate(720deg); opacity: 0; }
+    }
+
+    /* =============================================
+       HEADER / NAV
+       ============================================= */
+    .site-header {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(0,48,135,0.95);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border-bottom: 1px solid rgba(255,255,255,0.1);
+      padding: 14px 0;
+    }
+
+    .site-header .container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+    }
+
+    .site-logo {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      color: #fff;
+    }
+
+    /* TODO: UPDATE — Replace this placeholder logo with an <img> tag pointing to your school logo */
+    .logo-mark {
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      background: var(--color-secondary);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: var(--font-heading);
+      font-size: 20px;
+      font-weight: 800;
+      color: var(--color-primary);
+      flex-shrink: 0;
+      box-shadow: var(--shadow-glow);
+    }
+
+    .logo-text {
+      display: flex;
+      flex-direction: column;
+      line-height: 1.2;
+    }
+    .logo-text .school-name {
+      font-family: var(--font-heading);
+      font-size: 0.875rem;
+      font-weight: 700;
+      color: var(--color-secondary);
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+    }
+    .logo-text .grade-label {
+      font-size: 0.75rem;
+      color: rgba(255,255,255,0.75);
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      list-style: none;
+    }
+
+    .nav-links a {
+      font-size: 0.875rem;
+      font-weight: 500;
+      color: rgba(255,255,255,0.85);
+      padding: 6px 14px;
+      border-radius: 999px;
+      transition: background 0.2s, color 0.2s;
+    }
+    .nav-links a:hover {
+      background: rgba(255,255,255,0.12);
+      color: #fff;
+    }
+
+    .btn-nav {
+      background: var(--color-secondary) !important;
+      color: var(--color-primary) !important;
+      font-weight: 700 !important;
+    }
+    .btn-nav:hover {
+      background: var(--color-secondary-dark) !important;
+    }
+
+    /* =============================================
+       HERO SECTION
+       ============================================= */
+    .hero {
+      position: relative;
+      overflow: hidden;
+      min-height: 92vh;
+      display: flex;
+      align-items: center;
+      background: linear-gradient(135deg,
+        var(--color-primary-dark) 0%,
+        var(--color-primary) 40%,
+        var(--color-primary-light) 70%,
+        #2d6a9f 100%);
+      background-size: 200% 200%;
+      animation: gradientShift 10s ease infinite;
+    }
+
+    /* Decorative floating stars */
+    .hero-stars {
+      position: absolute;
+      inset: 0;
+      pointer-events: none;
+      overflow: hidden;
+    }
+    .star {
+      position: absolute;
+      bottom: -10px;
+      font-size: 1rem;
+      animation: starFloat linear infinite;
+      opacity: 0.6;
+    }
+
+    /* Decorative gold arc */
+    .hero::after {
+      content: '';
+      position: absolute;
+      bottom: -60px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 140%;
+      height: 120px;
+      background: var(--color-bg);
+      border-radius: 50% 50% 0 0 / 100% 100% 0 0;
+    }
+
+    .hero .container {
+      position: relative;
+      z-index: 2;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 48px;
+      align-items: center;
+      padding-block: 80px 120px;
+    }
+
+    .hero-content { animation: fadeUp 0.8s ease both; }
+
+    .hero-eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(255,184,28,0.15);
+      border: 1px solid rgba(255,184,28,0.35);
+      color: var(--color-secondary);
+      font-size: 0.8rem;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      padding: 6px 14px;
+      border-radius: 999px;
+      margin-bottom: 24px;
+    }
+
+    .hero-title {
+      font-family: var(--font-heading);
+      font-size: clamp(2.2rem, 5vw, 3.6rem);
+      font-weight: 800;
+      line-height: 1.1;
+      color: #fff;
+      margin-bottom: 20px;
+    }
+
+    .hero-title .highlight {
+      background: linear-gradient(90deg, var(--color-secondary), #fff 60%);
+      background-size: 200% auto;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      animation: shimmer 3s linear infinite;
+    }
+
+    .hero-subtitle {
+      font-size: 1.1rem;
+      color: rgba(255,255,255,0.82);
+      max-width: 480px;
+      margin-bottom: 36px;
+      line-height: 1.7;
+    }
+
+    .hero-actions {
+      display: flex;
+      gap: 14px;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      padding: 14px 28px;
+      border-radius: 999px;
+      font-family: var(--font-body);
+      font-size: 0.95rem;
+      font-weight: 700;
+      cursor: pointer;
+      transition: transform 0.2s, box-shadow 0.2s, background 0.2s;
+      border: none;
+      text-decoration: none;
+    }
+    .btn:hover { transform: translateY(-2px); }
+    .btn:active { transform: translateY(0); }
+
+    .btn-primary {
+      background: var(--color-secondary);
+      color: var(--color-primary);
+      box-shadow: 0 4px 18px rgba(255,184,28,0.40);
+    }
+    .btn-primary:hover {
+      background: var(--color-secondary-dark);
+      box-shadow: 0 8px 28px rgba(255,184,28,0.55);
+    }
+
+    .btn-outline {
+      background: transparent;
+      color: #fff;
+      border: 2px solid rgba(255,255,255,0.5);
+    }
+    .btn-outline:hover {
+      background: rgba(255,255,255,0.1);
+      border-color: rgba(255,255,255,0.8);
+    }
+
+    /* Hero illustration panel */
+    .hero-visual {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      animation: fadeUp 0.8s 0.2s ease both;
+    }
+
+    .hero-card-stack {
+      position: relative;
+      width: 320px;
+      height: 320px;
+    }
+
+    .card-stack-item {
+      position: absolute;
+      border-radius: var(--radius-lg);
+      box-shadow: var(--shadow-lg);
+    }
+    .card-stack-item:nth-child(1) {
+      width: 200px; height: 150px;
+      background: linear-gradient(135deg, #FFB81C, #ff9f00);
+      bottom: 20px; right: 0;
+      transform: rotate(6deg);
+      display: flex; align-items: center; justify-content: center;
+      font-size: 4rem;
+      animation: float 4s 0.5s ease-in-out infinite;
+    }
+    .card-stack-item:nth-child(2) {
+      width: 220px; height: 160px;
+      background: rgba(255,255,255,0.15);
+      backdrop-filter: blur(12px);
+      border: 1px solid rgba(255,255,255,0.25);
+      top: 20px; left: 0;
+      transform: rotate(-4deg);
+      display: flex; align-items: center; justify-content: center;
+      font-size: 4rem;
+      animation: float 4s ease-in-out infinite;
+    }
+    .card-stack-item:nth-child(3) {
+      width: 190px; height: 140px;
+      background: linear-gradient(135deg, rgba(255,255,255,0.2), rgba(255,255,255,0.05));
+      border: 1px solid rgba(255,255,255,0.15);
+      top: 80px; left: 60px;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 3.5rem;
+      animation: float 5s 0.8s ease-in-out infinite;
+    }
+
+    /* =============================================
+       SECTION SHARED STYLES
+       ============================================= */
+    section { padding-block: 80px; }
+
+    .section-header {
+      text-align: center;
+      margin-bottom: 56px;
+    }
+    .section-eyebrow {
+      display: inline-block;
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--color-primary);
+      background: rgba(0,48,135,0.08);
+      padding: 5px 14px;
+      border-radius: 999px;
+      margin-bottom: 12px;
+    }
+    .section-title {
+      font-family: var(--font-heading);
+      font-size: clamp(1.6rem, 3.5vw, 2.4rem);
+      font-weight: 700;
+      color: var(--color-text);
+      line-height: 1.2;
+      margin-bottom: 14px;
+    }
+    .section-subtitle {
+      font-size: 1rem;
+      color: var(--color-text-muted);
+      max-width: 560px;
+      margin-inline: auto;
+      line-height: 1.7;
+    }
+
+    /* =============================================
+       WELCOME STRIP
+       ============================================= */
+    .welcome-strip {
+      background: linear-gradient(90deg, var(--color-primary), var(--color-primary-light));
+      color: #fff;
+      padding-block: 48px;
+    }
+    .welcome-strip .container {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 48px;
+      align-items: center;
+    }
+    .welcome-strip h2 {
+      font-family: var(--font-heading);
+      font-size: clamp(1.4rem, 2.5vw, 1.9rem);
+      font-weight: 700;
+      margin-bottom: 12px;
+    }
+    .welcome-strip p {
+      font-size: 0.975rem;
+      line-height: 1.75;
+      color: rgba(255,255,255,0.85);
+    }
+    .welcome-stat {
+      background: rgba(255,255,255,0.1);
+      border: 1px solid rgba(255,255,255,0.15);
+      border-radius: var(--radius-md);
+      padding: 20px 24px;
+      text-align: center;
+    }
+    .welcome-stat .stat-number {
+      font-family: var(--font-heading);
+      font-size: 2.4rem;
+      font-weight: 800;
+      color: var(--color-secondary);
+      line-height: 1;
+    }
+    .welcome-stat .stat-label {
+      font-size: 0.8rem;
+      color: rgba(255,255,255,0.75);
+      margin-top: 4px;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+    }
+    .welcome-stats {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+    }
+
+    /* =============================================
+       FILES SECTION
+       ============================================= */
+    .files-section {
+      background: var(--color-bg);
+    }
+
+    .files-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 28px;
+    }
+
+    .file-card {
+      background: var(--color-surface);
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      box-shadow: var(--shadow-sm);
+      transition: transform 0.3s, box-shadow 0.3s;
+      display: flex;
+      flex-direction: column;
+    }
+    .file-card:hover {
+      transform: translateY(-6px);
+      box-shadow: var(--shadow-lg);
+    }
+
+    .file-card-banner {
+      padding: 36px 32px;
+      display: flex;
+      align-items: center;
+      gap: 20px;
+    }
+    .file-card--interactive .file-card-banner {
+      background: linear-gradient(135deg, var(--color-primary), var(--color-primary-light));
+    }
+    .file-card--video .file-card-banner {
+      background: linear-gradient(135deg, #1a1a2e, #2d1b69);
+    }
+
+    .file-icon {
+      width: 72px;
+      height: 72px;
+      border-radius: var(--radius-md);
+      background: rgba(255,255,255,0.15);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 2.4rem;
+      flex-shrink: 0;
+      border: 1px solid rgba(255,255,255,0.2);
+    }
+
+    .file-card-banner-text { color: #fff; }
+    .file-card-banner-text h3 {
+      font-family: var(--font-heading);
+      font-size: 1.25rem;
+      font-weight: 700;
+      margin-bottom: 4px;
+    }
+    .file-card-banner-text .file-type-badge {
+      display: inline-block;
+      background: rgba(255,255,255,0.2);
+      font-size: 0.72rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      padding: 2px 10px;
+      border-radius: 999px;
+    }
+
+    .file-card-body {
+      padding: 28px 32px;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .file-description {
+      font-size: 0.95rem;
+      line-height: 1.75;
+      color: var(--color-text-muted);
+    }
+
+    .feature-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+    .feature-list li {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      font-size: 0.875rem;
+      color: var(--color-text);
+    }
+    .feature-list .feature-icon {
+      width: 22px;
+      height: 22px;
+      border-radius: 50%;
+      background: rgba(0,48,135,0.1);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.75rem;
+      flex-shrink: 0;
+      margin-top: 1px;
+    }
+    .file-card--video .feature-list .feature-icon {
+      background: rgba(45,27,105,0.1);
+    }
+
+    .file-card-footer {
+      padding: 0 32px 28px;
+    }
+    .btn-card {
+      width: 100%;
+      background: var(--color-primary);
+      color: #fff;
+      padding: 13px 20px;
+      border-radius: var(--radius-sm);
+      box-shadow: 0 4px 14px rgba(0,48,135,0.25);
+    }
+    .btn-card:hover {
+      background: var(--color-primary-light);
+      box-shadow: 0 8px 22px rgba(0,48,135,0.35);
+    }
+    .file-card--video .btn-card {
+      background: #2d1b69;
+      box-shadow: 0 4px 14px rgba(45,27,105,0.25);
+    }
+    .file-card--video .btn-card:hover {
+      background: #3d2b89;
+    }
+
+    /* =============================================
+       NOTICE / CALLOUT
+       ============================================= */
+    .notice-callout {
+      background: linear-gradient(135deg, #fff8e7, #fff3cc);
+      border: 1.5px solid #FFB81C;
+      border-radius: var(--radius-md);
+      padding: 20px 24px;
+      display: flex;
+      gap: 14px;
+      align-items: flex-start;
+      margin-top: 28px;
+    }
+    .notice-icon {
+      font-size: 1.4rem;
+      flex-shrink: 0;
+      margin-top: 2px;
+    }
+    .notice-callout h4 {
+      font-family: var(--font-heading);
+      font-size: 0.9rem;
+      color: #8a5e00;
+      margin-bottom: 4px;
+    }
+    .notice-callout p {
+      font-size: 0.85rem;
+      color: #6b4800;
+      line-height: 1.6;
+    }
+
+    /* =============================================
+       HOW IT WORKS
+       ============================================= */
+    .how-it-works { background: var(--color-surface); }
+
+    .steps-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+    }
+
+    .step-card {
+      background: var(--color-bg);
+      border-radius: var(--radius-md);
+      padding: 28px 24px;
+      position: relative;
+      border: 1px solid var(--color-border);
+      transition: box-shadow 0.2s;
+    }
+    .step-card:hover { box-shadow: var(--shadow-md); }
+
+    .step-number {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background: var(--color-primary);
+      color: #fff;
+      font-family: var(--font-heading);
+      font-size: 1rem;
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 16px;
+    }
+    .step-card h3 {
+      font-family: var(--font-heading);
+      font-size: 1rem;
+      font-weight: 600;
+      color: var(--color-text);
+      margin-bottom: 8px;
+    }
+    .step-card p {
+      font-size: 0.875rem;
+      color: var(--color-text-muted);
+      line-height: 1.7;
+    }
+    .step-emoji {
+      font-size: 1.75rem;
+      margin-bottom: 12px;
+      display: block;
+    }
+
+    /* connector line between steps (desktop) */
+    .steps-grid .step-card:not(:last-child)::after {
+      content: '→';
+      position: absolute;
+      top: 32px;
+      right: -20px;
+      font-size: 1.2rem;
+      color: var(--color-border);
+      z-index: 1;
+    }
+
+    .steps-tab {
+      display: flex;
+      gap: 12px;
+      justify-content: center;
+      margin-bottom: 32px;
+      flex-wrap: wrap;
+    }
+    .steps-tab-btn {
+      padding: 10px 24px;
+      border-radius: 999px;
+      font-size: 0.875rem;
+      font-weight: 600;
+      cursor: pointer;
+      border: 2px solid var(--color-border);
+      background: transparent;
+      color: var(--color-text-muted);
+      transition: all 0.2s;
+      font-family: var(--font-body);
+    }
+    .steps-tab-btn.active,
+    .steps-tab-btn:hover {
+      background: var(--color-primary);
+      border-color: var(--color-primary);
+      color: #fff;
+    }
+
+    .steps-panel { display: none; }
+    .steps-panel.active { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+
+    /* =============================================
+       DRIVE CTA SECTION
+       ============================================= */
+    .cta-section {
+      background: linear-gradient(135deg,
+        var(--color-primary-dark) 0%,
+        var(--color-primary) 50%,
+        #2d6a9f 100%);
+      position: relative;
+      overflow: hidden;
+    }
+    .cta-section::before {
+      content: '';
+      position: absolute;
+      top: -50%;
+      left: -10%;
+      width: 40%;
+      height: 200%;
+      background: rgba(255,255,255,0.03);
+      border-radius: 50%;
+    }
+    .cta-section .container {
+      position: relative;
+      z-index: 1;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 24px;
+    }
+    .cta-badge {
+      background: rgba(255,184,28,0.2);
+      border: 1px solid rgba(255,184,28,0.4);
+      color: var(--color-secondary);
+      font-size: 0.8rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      padding: 6px 16px;
+      border-radius: 999px;
+    }
+    .cta-title {
+      font-family: var(--font-heading);
+      font-size: clamp(1.8rem, 4vw, 2.8rem);
+      font-weight: 800;
+      color: #fff;
+      line-height: 1.15;
+      max-width: 640px;
+    }
+    .cta-subtitle {
+      font-size: 1rem;
+      color: rgba(255,255,255,0.8);
+      max-width: 520px;
+      line-height: 1.7;
+    }
+    .cta-drive-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      background: #fff;
+      color: var(--color-primary);
+      font-size: 1rem;
+      font-weight: 700;
+      padding: 16px 36px;
+      border-radius: 999px;
+      box-shadow: 0 6px 30px rgba(0,0,0,0.25);
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+    .cta-drive-btn:hover {
+      transform: translateY(-3px) scale(1.02);
+      box-shadow: 0 12px 40px rgba(0,0,0,0.35);
+    }
+    .cta-drive-btn .drive-logo {
+      width: 28px;
+      height: 28px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.4rem;
+    }
+    .cta-note {
+      font-size: 0.8rem;
+      color: rgba(255,255,255,0.55);
+    }
+
+    /* =============================================
+       FAQ
+       ============================================= */
+    .faq-section { background: var(--color-bg); }
+
+    .faq-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+    }
+
+    details.faq-item {
+      background: var(--color-surface);
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius-md);
+      overflow: hidden;
+      transition: box-shadow 0.2s;
+    }
+    details.faq-item[open] {
+      box-shadow: var(--shadow-sm);
+    }
+
+    details.faq-item summary {
+      padding: 18px 22px;
+      font-weight: 600;
+      font-size: 0.9rem;
+      cursor: pointer;
+      list-style: none;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 12px;
+      user-select: none;
+    }
+    details.faq-item summary::-webkit-details-marker { display: none; }
+    details.faq-item summary::after {
+      content: '+';
+      font-size: 1.25rem;
+      font-weight: 400;
+      color: var(--color-primary);
+      flex-shrink: 0;
+      transition: transform 0.2s;
+    }
+    details.faq-item[open] summary::after {
+      content: '−';
+    }
+
+    .faq-answer {
+      padding: 0 22px 18px;
+      font-size: 0.875rem;
+      line-height: 1.75;
+      color: var(--color-text-muted);
+    }
+
+    /* =============================================
+       FOOTER
+       ============================================= */
+    .site-footer {
+      background: var(--color-primary-dark);
+      color: rgba(255,255,255,0.7);
+      padding-block: 40px;
+    }
+    .site-footer .container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+      flex-wrap: wrap;
+    }
+    .footer-brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+    .footer-brand .logo-mark {
+      width: 36px;
+      height: 36px;
+      font-size: 16px;
+    }
+    .footer-brand p { font-size: 0.8rem; line-height: 1.5; }
+    .footer-brand strong { color: #fff; }
+
+    .footer-links {
+      list-style: none;
+      display: flex;
+      gap: 16px;
+    }
+    .footer-links a {
+      font-size: 0.8rem;
+      color: rgba(255,255,255,0.55);
+      transition: color 0.2s;
+    }
+    .footer-links a:hover { color: var(--color-secondary); }
+
+    .footer-copy {
+      font-size: 0.75rem;
+      color: rgba(255,255,255,0.35);
+      text-align: right;
+    }
+
+    /* =============================================
+       RESPONSIVE
+       ============================================= */
+    @media (max-width: 1024px) {
+      .hero .container { gap: 32px; }
+      .steps-panel.active { grid-template-columns: 1fr 1fr; }
+    }
+
+    @media (max-width: 768px) {
+      section { padding-block: 56px; }
+
+      .nav-links { display: none; }
+
+      .hero .container {
+        grid-template-columns: 1fr;
+        text-align: center;
+        padding-block: 60px 100px;
+      }
+      .hero-actions { justify-content: center; }
+      .hero-subtitle { margin-inline: auto; }
+      .hero-visual { display: none; }
+
+      .welcome-strip .container { grid-template-columns: 1fr; gap: 24px; }
+      .welcome-stats { grid-template-columns: repeat(3, 1fr); }
+
+      .files-grid { grid-template-columns: 1fr; }
+
+      .steps-panel.active { grid-template-columns: 1fr; }
+      .step-card::after { display: none; }
+
+      .faq-grid { grid-template-columns: 1fr; }
+
+      .site-footer .container { flex-direction: column; align-items: flex-start; gap: 16px; }
+      .footer-copy { text-align: left; }
+    }
+
+    @media (max-width: 480px) {
+      .welcome-stats { grid-template-columns: 1fr; }
+      .hero-actions { flex-direction: column; align-items: center; }
+      .btn { width: 100%; max-width: 300px; }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- ============================================================
+       HEADER
+       ============================================================ -->
+  <header class="site-header" role="banner">
+    <div class="container">
+      <a href="#" class="site-logo" aria-label="Home">
+        <!-- TODO: UPDATE — Replace .logo-mark with <img src="YOUR_LOGO_URL" alt="School Logo" width="44" height="44" style="border-radius:50%"> -->
+        <div class="logo-mark" aria-hidden="true">🎓</div>
+        <div class="logo-text">
+          <!-- TODO: UPDATE — Replace with your school name -->
+          <span class="school-name">Your School Name</span>
+          <span class="grade-label">5th Grade · Class of 2026</span>
+        </div>
+      </a>
+
+      <nav aria-label="Page navigation">
+        <ul class="nav-links">
+          <li><a href="#files">Our Files</a></li>
+          <li><a href="#how-it-works">How To Use</a></li>
+          <li><a href="#faq">FAQ</a></li>
+          <!-- TODO: UPDATE — Replace href with your Google Drive folder URL -->
+          <li><a href="https://drive.google.com/YOUR_FOLDER_LINK" class="btn btn-nav" target="_blank" rel="noopener">
+            Open Drive Folder
+          </a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- ============================================================
+         HERO
+         ============================================================ -->
+    <section class="hero" aria-labelledby="hero-heading">
+
+      <!-- Decorative floating emojis -->
+      <div class="hero-stars" aria-hidden="true">
+        <span class="star" style="left:5%;animation-duration:12s;animation-delay:0s;font-size:0.9rem">⭐</span>
+        <span class="star" style="left:15%;animation-duration:9s;animation-delay:2s;font-size:1.1rem">🎉</span>
+        <span class="star" style="left:25%;animation-duration:14s;animation-delay:1s;font-size:0.8rem">⭐</span>
+        <span class="star" style="left:40%;animation-duration:10s;animation-delay:3s;font-size:1rem">🌟</span>
+        <span class="star" style="left:55%;animation-duration:11s;animation-delay:0.5s;font-size:0.9rem">✨</span>
+        <span class="star" style="left:70%;animation-duration:13s;animation-delay:1.5s;font-size:1rem">🎊</span>
+        <span class="star" style="left:80%;animation-duration:8s;animation-delay:2.5s;font-size:0.85rem">⭐</span>
+        <span class="star" style="left:90%;animation-duration:15s;animation-delay:0.8s;font-size:1.1rem">🌟</span>
+      </div>
+
+      <div class="container">
+        <div class="hero-content">
+          <div class="hero-eyebrow">
+            <span>🎓</span>
+            <!-- TODO: UPDATE — Replace with your school name -->
+            <span>Your School Name · Class of 2026</span>
+          </div>
+
+          <h1 class="hero-title" id="hero-heading">
+            Memories Made to
+            <span class="highlight">Last a Lifetime</span>
+          </h1>
+
+          <p class="hero-subtitle">
+            Celebrate your child's incredible 5th-grade journey! We've put together
+            an interactive slideshow and video — packed with over 200 photos and the
+            best memories from the year — just for your family to enjoy and keep forever.
+          </p>
+
+          <div class="hero-actions">
+            <!-- TODO: UPDATE — Replace href with your Google Drive folder URL -->
+            <a
+              href="https://drive.google.com/YOUR_FOLDER_LINK"
+              class="btn btn-primary"
+              target="_blank"
+              rel="noopener"
+              aria-label="Open Google Drive folder with slideshow files"
+            >
+              📁 Open Drive Folder
+            </a>
+            <a href="#files" class="btn btn-outline">
+              Learn More ↓
+            </a>
+          </div>
+        </div>
+
+        <!-- Decorative visual -->
+        <div class="hero-visual" aria-hidden="true">
+          <div class="hero-card-stack">
+            <div class="card-stack-item">🎬</div>
+            <div class="card-stack-item">📸</div>
+            <div class="card-stack-item">🎶</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         WELCOME STRIP
+         ============================================================ -->
+    <section class="welcome-strip" aria-labelledby="welcome-heading">
+      <div class="container">
+        <div>
+          <h2 id="welcome-heading">A Gift From Your Child's Teachers 🎁</h2>
+          <p>
+            We've poured our hearts into putting together this digital keepsake for every family.
+            Inside the Google Drive folder you'll find two special files — an interactive slideshow
+            that lets you explore every photo at your own pace, and a ready-to-watch video
+            of the presentation we showed at the Awards Ceremony.
+            <!-- TODO: UPDATE — Replace "Teacher Name" with actual teacher's name(s) -->
+            <br /><br />
+            With love, <strong>Teacher Name &amp; the 5th Grade Team</strong>
+          </p>
+        </div>
+
+        <div class="welcome-stats" aria-label="Slideshow highlights">
+          <div class="welcome-stat">
+            <div class="stat-number">200+</div>
+            <div class="stat-label">Photos</div>
+          </div>
+          <div class="welcome-stat">
+            <div class="stat-number">4</div>
+            <div class="stat-label">Music Tracks</div>
+          </div>
+          <div class="welcome-stat">
+            <div class="stat-number">1</div>
+            <div class="stat-label">Year of Memories</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         FILES SECTION
+         ============================================================ -->
+    <section class="files-section" id="files" aria-labelledby="files-heading">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-eyebrow">What's in the Folder</span>
+          <h2 class="section-title" id="files-heading">Two Ways to Relive the Memories</h2>
+          <p class="section-subtitle">
+            Both files are yours to download and keep. Choose the experience that works best for you.
+          </p>
+        </div>
+
+        <div class="files-grid">
+
+          <!-- File 1: Interactive Slideshow -->
+          <article class="file-card file-card--interactive" aria-labelledby="slideshow-title">
+            <div class="file-card-banner">
+              <div class="file-icon" aria-hidden="true">🖥️</div>
+              <div class="file-card-banner-text">
+                <h3 id="slideshow-title">Interactive Slideshow</h3>
+                <span class="file-type-badge">.html file</span>
+              </div>
+            </div>
+
+            <div class="file-card-body">
+              <p class="file-description">
+                An all-in-one browser app packed with every photo from the year. Explore at your own
+                pace — zoom in to see details, pan across a giant canvas, or sit back and let the
+                auto-play slideshow take you on a trip down memory lane with music.
+              </p>
+
+              <ul class="feature-list" aria-label="Slideshow features">
+                <li>
+                  <span class="feature-icon" aria-hidden="true">🎬</span>
+                  <span><strong>Slideshow Mode</strong> — Auto-plays through all photos with background music</span>
+                </li>
+                <li>
+                  <span class="feature-icon" aria-hidden="true">🔍</span>
+                  <span><strong>Explore Mode</strong> — Zoom and pan freely to find any photo</span>
+                </li>
+                <li>
+                  <span class="feature-icon" aria-hidden="true">🌐</span>
+                  <span><strong>Works in any browser</strong> — Chrome, Firefox, Safari, Edge</span>
+                </li>
+                <li>
+                  <span class="feature-icon" aria-hidden="true">💾</span>
+                  <span><strong>Download once, play forever</strong> — No internet needed after first load</span>
+                </li>
+              </ul>
+
+              <div class="notice-callout" role="note" aria-label="Loading time note">
+                <span class="notice-icon" aria-hidden="true">⏱️</span>
+                <div>
+                  <h4>First-Open Loading Time</h4>
+                  <p>
+                    On the very first time you open this file, your browser saves all 200+ photos and
+                    music to its local storage (IndexedDB). This takes about <strong>10–20 seconds</strong>.
+                    After that, it opens instantly every time — even without internet!
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="file-card-footer">
+              <!-- TODO: UPDATE — Replace href with your Google Drive folder URL -->
+              <a
+                href="https://drive.google.com/YOUR_FOLDER_LINK"
+                class="btn btn-card"
+                target="_blank"
+                rel="noopener"
+                aria-label="Download the interactive slideshow HTML file from Google Drive"
+              >
+                📁 Get the Slideshow File
+              </a>
+            </div>
+          </article>
+
+          <!-- File 2: MP4 Video -->
+          <article class="file-card file-card--video" aria-labelledby="video-title">
+            <div class="file-card-banner">
+              <div class="file-icon" aria-hidden="true">🎥</div>
+              <div class="file-card-banner-text">
+                <h3 id="video-title">Awards Ceremony Video</h3>
+                <span class="file-type-badge">.mp4 video</span>
+              </div>
+            </div>
+
+            <div class="file-card-body">
+              <p class="file-description">
+                The full slideshow presentation exactly as it was shown at the 5th Grade Awards
+                Ceremony — complete with music, transitions, and every photo. Just hit play and enjoy.
+                Perfect for watching with the family on any device.
+              </p>
+
+              <ul class="feature-list" aria-label="Video features">
+                <li>
+                  <span class="feature-icon" aria-hidden="true">▶️</span>
+                  <span><strong>Ready to watch</strong> — Opens in any video player or browser</span>
+                </li>
+                <li>
+                  <span class="feature-icon" aria-hidden="true">🎵</span>
+                  <span><strong>Music included</strong> — Same soundtrack from the ceremony</span>
+                </li>
+                <li>
+                  <span class="feature-icon" aria-hidden="true">📱</span>
+                  <span><strong>Works on all devices</strong> — Phone, tablet, laptop, TV</span>
+                </li>
+                <li>
+                  <span class="feature-icon" aria-hidden="true">🏆</span>
+                  <span><strong>Awards Ceremony cut</strong> — The definitive, curated version</span>
+                </li>
+              </ul>
+
+              <div class="notice-callout" role="note" aria-label="Download size note">
+                <span class="notice-icon" aria-hidden="true">📦</span>
+                <div>
+                  <h4>Downloading the Video</h4>
+                  <p>
+                    The MP4 video is a large file. When downloading from Google Drive, click
+                    <strong>"Download"</strong> and give it a few minutes depending on your connection.
+                    Once saved, it plays anytime without internet.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="file-card-footer">
+              <!-- TODO: UPDATE — Replace href with your Google Drive folder URL -->
+              <a
+                href="https://drive.google.com/YOUR_FOLDER_LINK"
+                class="btn btn-card"
+                target="_blank"
+                rel="noopener"
+                aria-label="Download the slideshow MP4 video from Google Drive"
+              >
+                📁 Get the Video File
+              </a>
+            </div>
+          </article>
+
+        </div><!-- /.files-grid -->
+      </div>
+    </section>
+
+    <!-- ============================================================
+         HOW IT WORKS
+         ============================================================ -->
+    <section class="how-it-works" id="how-it-works" aria-labelledby="how-heading">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-eyebrow">Step-by-Step Guide</span>
+          <h2 class="section-title" id="how-heading">How to Use Each File</h2>
+          <p class="section-subtitle">Follow these simple steps to start enjoying the memories.</p>
+        </div>
+
+        <!-- Tab switcher -->
+        <div class="steps-tab" role="tablist" aria-label="Select file type">
+          <button
+            class="steps-tab-btn active"
+            role="tab"
+            aria-selected="true"
+            aria-controls="panel-slideshow"
+            id="tab-slideshow"
+            onclick="switchTab('slideshow')"
+          >
+            🖥️ Interactive Slideshow
+          </button>
+          <button
+            class="steps-tab-btn"
+            role="tab"
+            aria-selected="false"
+            aria-controls="panel-video"
+            id="tab-video"
+            onclick="switchTab('video')"
+          >
+            🎥 Awards Video
+          </button>
+        </div>
+
+        <!-- Steps: Interactive Slideshow -->
+        <div
+          class="steps-panel active"
+          id="panel-slideshow"
+          role="tabpanel"
+          aria-labelledby="tab-slideshow"
+        >
+          <div class="step-card">
+            <span class="step-emoji" aria-hidden="true">📁</span>
+            <div class="step-number" aria-label="Step 1">1</div>
+            <h3>Open the Drive Folder</h3>
+            <p>Click the <strong>"Open Drive Folder"</strong> button on this page to go to the
+               shared Google Drive folder.</p>
+          </div>
+          <div class="step-card">
+            <span class="step-emoji" aria-hidden="true">⬇️</span>
+            <div class="step-number" aria-label="Step 2">2</div>
+            <h3>Download the HTML File</h3>
+            <p>Find the file ending in <strong>.html</strong>, click the three-dot menu, and
+               choose <strong>"Download"</strong>. Save it anywhere on your computer.</p>
+          </div>
+          <div class="step-card">
+            <span class="step-emoji" aria-hidden="true">🌐</span>
+            <div class="step-number" aria-label="Step 3">3</div>
+            <h3>Open in Your Browser</h3>
+            <p>Double-click the downloaded file to open it in Chrome, Firefox, Safari, or
+               Edge. Wait <strong>10–20 seconds</strong> for photos to load the first time.</p>
+          </div>
+        </div>
+
+        <!-- Steps: Video -->
+        <div
+          class="steps-panel"
+          id="panel-video"
+          role="tabpanel"
+          aria-labelledby="tab-video"
+        >
+          <div class="step-card">
+            <span class="step-emoji" aria-hidden="true">📁</span>
+            <div class="step-number" aria-label="Step 1">1</div>
+            <h3>Open the Drive Folder</h3>
+            <p>Click the <strong>"Open Drive Folder"</strong> button on this page to go to the
+               shared Google Drive folder.</p>
+          </div>
+          <div class="step-card">
+            <span class="step-emoji" aria-hidden="true">⬇️</span>
+            <div class="step-number" aria-label="Step 2">2</div>
+            <h3>Download the MP4 File</h3>
+            <p>Find the file ending in <strong>.mp4</strong>, click the three-dot menu, and
+               choose <strong>"Download"</strong>. The file is large — allow a few minutes.</p>
+          </div>
+          <div class="step-card">
+            <span class="step-emoji" aria-hidden="true">▶️</span>
+            <div class="step-number" aria-label="Step 3">3</div>
+            <h3>Hit Play &amp; Enjoy!</h3>
+            <p>Open the video in any video player (VLC, QuickTime, Windows Media Player,
+               or directly in your browser). Sit back and enjoy the show! 🎉</p>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ============================================================
+         CTA — DRIVE FOLDER
+         ============================================================ -->
+    <section class="cta-section" id="get-files" aria-labelledby="cta-heading">
+      <div class="container">
+        <span class="cta-badge">📁 Google Drive Folder</span>
+        <h2 class="cta-title" id="cta-heading">
+          Ready to Download Your Child's Memories?
+        </h2>
+        <p class="cta-subtitle">
+          Both files are waiting for you in our shared Google Drive folder.
+          Download them today and keep these memories forever. 💛
+        </p>
+
+        <!-- TODO: UPDATE — Replace href with your actual Google Drive folder URL -->
+        <a
+          href="https://drive.google.com/YOUR_FOLDER_LINK"
+          class="cta-drive-btn"
+          target="_blank"
+          rel="noopener"
+          aria-label="Open the shared Google Drive folder"
+        >
+          <span class="drive-logo" aria-hidden="true">📂</span>
+          Open Shared Google Drive Folder
+        </a>
+
+        <p class="cta-note">
+          Link opens in a new tab · No sign-in required to view or download
+        </p>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         FAQ
+         ============================================================ -->
+    <section class="faq-section" id="faq" aria-labelledby="faq-heading">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-eyebrow">Common Questions</span>
+          <h2 class="section-title" id="faq-heading">Frequently Asked Questions</h2>
+        </div>
+
+        <div class="faq-grid">
+
+          <details class="faq-item">
+            <summary>Why does the slideshow file take so long to open?</summary>
+            <div class="faq-answer">
+              The HTML slideshow packs over 200 photos and 4 music files inside a single file.
+              The very first time you open it, your browser saves all of those images into a
+              local database called IndexedDB. This one-time setup takes about 10–20 seconds.
+              After that, the file opens almost instantly every time — no internet required!
+            </div>
+          </details>
+
+          <details class="faq-item">
+            <summary>Do I need the internet to use these files after downloading?</summary>
+            <div class="faq-answer">
+              No! Once downloaded, both files work completely offline. The HTML slideshow
+              caches everything in your browser's local storage, and the MP4 video is a
+              standalone file. You can watch them on a plane, at grandma's house, or anywhere.
+            </div>
+          </details>
+
+          <details class="faq-item">
+            <summary>Which browser should I use for the slideshow?</summary>
+            <div class="faq-answer">
+              The slideshow works in any modern browser. We recommend
+              <strong>Google Chrome</strong> or <strong>Microsoft Edge</strong> for the best
+              experience. Safari and Firefox also work great. Just make sure your browser
+              is up to date.
+            </div>
+          </details>
+
+          <details class="faq-item">
+            <summary>How do I navigate the interactive slideshow?</summary>
+            <div class="faq-answer">
+              The slideshow has two modes: <strong>Slideshow Mode</strong> auto-plays all
+              photos with music — just press play and relax. <strong>Explore Mode</strong>
+              lets you freely browse: use your scroll wheel (or pinch on a touchscreen) to
+              zoom, and click-and-drag to pan around the full canvas of photos.
+            </div>
+          </details>
+
+          <details class="faq-item">
+            <summary>Can I share these files with grandparents or relatives?</summary>
+            <div class="faq-answer">
+              Absolutely! You're welcome to share the Google Drive folder link with immediate
+              family. Each person will need to download the files separately to their own device.
+              The files are meant as personal keepsakes for each family.
+            </div>
+          </details>
+
+          <details class="faq-item">
+            <summary>The slideshow seems stuck or blank — what do I do?</summary>
+            <div class="faq-answer">
+              First, give it the full 10–20 seconds on the initial load. If it still appears
+              stuck, try: <strong>(1)</strong> refreshing the page, <strong>(2)</strong> opening
+              the file in a different browser (Chrome usually works best), or
+              <strong>(3)</strong> clearing your browser's site data and re-opening the file
+              to trigger a fresh load.
+            </div>
+          </details>
+
+          <details class="faq-item">
+            <summary>How large are the files?</summary>
+            <div class="faq-answer">
+              The HTML slideshow file is compact since images load on first open, but the
+              initial download to your browser's storage requires a good internet connection
+              for the first-time setup. The MP4 video is a larger file. Both are worth the
+              download — these memories will last a lifetime! 🌟
+            </div>
+          </details>
+
+          <details class="faq-item">
+            <summary>Can I watch the video on my TV?</summary>
+            <div class="faq-answer">
+              Yes! Since the video is a standard MP4 file, you can cast it to a smart TV
+              using Chromecast or AirPlay, connect your laptop via HDMI, or use a USB drive
+              to play it directly on most modern smart TVs. It's a wonderful experience on
+              the big screen!
+            </div>
+          </details>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ============================================================
+       FOOTER
+       ============================================================ -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-brand">
+        <!-- TODO: UPDATE — Replace with your school logo if desired -->
+        <div class="logo-mark" aria-hidden="true">🎓</div>
+        <p>
+          <!-- TODO: UPDATE — Replace with your school name and year -->
+          <strong>Your School Name</strong><br />
+          5th Grade Class of 2026
+        </p>
+      </div>
+
+      <ul class="footer-links" aria-label="Footer navigation">
+        <li><a href="#files">Files</a></li>
+        <li><a href="#how-it-works">How To Use</a></li>
+        <li><a href="#faq">FAQ</a></li>
+        <!-- TODO: UPDATE — Replace href with your Google Drive folder URL -->
+        <li><a href="https://drive.google.com/YOUR_FOLDER_LINK" target="_blank" rel="noopener">Drive Folder</a></li>
+      </ul>
+
+      <p class="footer-copy">
+        Made with ❤️ for the<br />
+        <!-- TODO: UPDATE — Replace with school year -->
+        Class of 2026 · 2025–2026 School Year
+      </p>
+    </div>
+  </footer>
+
+  <script>
+    // Tab switcher for "How It Works" section
+    function switchTab(tab) {
+      const panels = document.querySelectorAll('.steps-panel');
+      const buttons = document.querySelectorAll('.steps-tab-btn');
+
+      panels.forEach(p => {
+        p.classList.remove('active');
+        p.setAttribute('aria-hidden', 'true');
+      });
+      buttons.forEach(b => {
+        b.classList.remove('active');
+        b.setAttribute('aria-selected', 'false');
+      });
+
+      const activePanel = document.getElementById('panel-' + tab);
+      const activeBtn   = document.getElementById('tab-' + tab);
+      if (activePanel) {
+        activePanel.classList.add('active');
+        activePanel.removeAttribute('aria-hidden');
+      }
+      if (activeBtn) {
+        activeBtn.classList.add('active');
+        activeBtn.setAttribute('aria-selected', 'true');
+      }
+    }
+
+    // Scroll-reveal: fade cards in as they enter the viewport
+    if ('IntersectionObserver' in window) {
+      const revealTargets = document.querySelectorAll(
+        '.file-card, .step-card, .faq-item, .welcome-stat'
+      );
+
+      const revealStyle = `
+        opacity: 0;
+        transform: translateY(24px);
+        transition: opacity 0.5s ease, transform 0.5s ease;
+      `;
+
+      revealTargets.forEach(el => el.setAttribute('style', revealStyle));
+
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.style.opacity = '1';
+            entry.target.style.transform = 'translateY(0)';
+            observer.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+
+      revealTargets.forEach(el => observer.observe(el));
+    }
+  </script>
+
+</body>
+</html>
